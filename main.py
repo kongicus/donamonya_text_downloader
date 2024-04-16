@@ -13,15 +13,12 @@ parser.add_argument("--end_date", type=str, default='20301201')
 args = parser.parse_args()
 
 def formatted_date(date_str):
-    # 使用正则表达式提取数字
     numbers = re.findall(r'\d+', date_str)
 
-    # 将数字转换为对应的年、月、日格式
     year = numbers[0]
     month = numbers[1]
     day = numbers[2]
 
-    # 格式化成指定形式的字符串
     new_date = f'{year}年{month}月{day}日'
     return new_date
 
