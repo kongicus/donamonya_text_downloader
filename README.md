@@ -1,17 +1,18 @@
-# 文本内容来源
-通过下载移动版 [Radio★kids](http://radioxxxkids.blog.fc2.com/) 的文章内容获取donamonya的文本
-# 使用方式
-## 下载指定日期区间内的文本到指定路径
+# Source of Text Content
+Obtain the text from donamonya by downloading the articles from the mobile version of [Radio★kids](http://radioxxxkids.blog.fc2.com/).
+
+# Usage
+## Download Text within Specified Date Range to Specified Path
 ```python
-# 下载指定日期区间内的文本
+# Download text within specified date range
 main.py --start_date 20240101 --end_date 20240201 --path doya_text_download
 ```
-## 如果不填写参数，使用默认值
+## Using Default Values if Parameters Not Provided
 ```python
 # main.py
 ```
-1) 如果 `--start_date` 不填写参数，会默认从最早发布的一篇内容开始下载，自动下载至`--end_date` 。
-2) 如果 `--end_date` 不填写参数，会自动下载至最新的内容。
-3) 如果 `--path` 不存在，会默认路径为 `doya_text_download` 。
-4) 如果所有参数都默认，会自动检测默认路径 `doya_text_download` 中最新下载的一篇，并下载这一篇之后 `Radio★kids` 的更新。
-5) 一般来说，使所有参数为默认值，在workflow里每周定时运行一次，以保持文本备份更新到了最新状态。
+1) If `--start_date` parameter is not provided, it will default to downloading from the earliest published content, automatically downloading until `--end_date`.
+2) If `--end_date` parameter is not provided, it will automatically download until the latest content.
+3) If `--path` does not exist, the default path will be `doya_text_download`.
+4) If all parameters are default, it will automatically detect the latest downloaded article in the default path `doya_text_download` and download updates from Radio★kids after that.
+5) Generally, setting all parameters to default values and scheduling the workflow to run once a week will ensure that the text backup stays up-to-date with the latest updates.
