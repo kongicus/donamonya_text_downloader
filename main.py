@@ -43,7 +43,6 @@ if args.start_date == '':
                 most_recent_date = file_date
             
     end_date_datetime = datetime.strptime(args.end_date, '%Y%m%d')
-    print(most_recent_date,most_recent_date,args.path)
     save_text(most_recent_date, end_date_datetime, args.path)
 else:
     start_date_datetime = datetime.strptime(args.start_date, '%Y%m%d')
