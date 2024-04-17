@@ -14,6 +14,8 @@ def fullwidth_to_halfwidth(text):
 
 
 def rename_files(path):
+    if not os.path.exists(path):
+        os.makedirs(path, exist_ok=True)
     for filename in os.listdir(path):
         full_path = os.path.join(path, filename)
         if os.path.isfile(full_path):
@@ -22,7 +24,3 @@ def rename_files(path):
             if new_file_name != file_name:
                 new_full_path = os.path.join(path, new_file_name + file_ext)
                 os.rename(full_path, new_full_path)
-
-
-path = "doya_text_download"
-rename_files(path)

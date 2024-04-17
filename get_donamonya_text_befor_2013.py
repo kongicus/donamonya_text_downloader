@@ -2,8 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import get_donamonya_text
 import renamefilename_fullwidth_to_halfwidth
-import time
-import random
 import os
 
 
@@ -42,13 +40,6 @@ def get_text_content(tag):
                 texts.append("\n")
             texts.extend(get_text_content(child))
     return texts
-
-#
-# def time_interval(a: int, b: int):
-#     # Generate a random interval between 3 and 6 seconds
-#     interval = random.uniform(a, b)
-#     # Wait for the random interval
-#     time.sleep(interval)
 
 
 def modify_file_name(filename: str):
