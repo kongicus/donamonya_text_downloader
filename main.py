@@ -42,7 +42,7 @@ if args.start_date == '':
             if file_date > most_recent_date:
                 most_recent_date = file_date
             
-        end_date_datetime = datetime.strptime(args.end_date, '%Y%m%d')
+    end_date_datetime = datetime.strptime(args.end_date, '%Y%m%d')
 
     save_text(most_recent_date, end_date_datetime, args.path)
 else:
