@@ -12,6 +12,7 @@ parser.add_argument("--start_date", type=str, default='')
 parser.add_argument("--end_date", type=str, default='20301201')
 args = parser.parse_args()
 
+
 def formatted_date(date_str):
     numbers = re.findall(r'\d+', date_str)
 
@@ -21,6 +22,7 @@ def formatted_date(date_str):
 
     new_date = f'{year}年{month}月{day}日'
     return new_date
+
 
 if args.start_date == '':
     # Represent an empty string as the minimum date

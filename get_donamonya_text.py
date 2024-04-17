@@ -7,9 +7,6 @@ import os
 
 # Fetch the webpage, and pass it to BeautifulSoup.
 def get_webpage_soup(weblink):
-    # send a GET request to fetch the webpage of list
-    response = requests.get(weblink)
-    
     # add headers to the request to let the server know that i am using a mobile browser
     headers = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1"}
 
@@ -81,7 +78,7 @@ def get_entry_text(doya_soup, attr_entry: str):
     return text_contents
 
 def sanitize_filename(filename):
-    illegal_chars = ['\\', '/', ':', '*', '?', '"', '<', '>', '|']
+    illegal_chars = ['\\', '/', ':', '*', '?', '"', '<', '>', '|', '／']
 
     for char in illegal_chars:
         filename = filename.replace(char, '_')
